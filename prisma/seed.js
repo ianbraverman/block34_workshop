@@ -6,14 +6,14 @@ const seed = async (number = 20) => {
       where: { id: i },
       update: {},
       create: {
-        name: `Person {i}`,
+        name: `Person ${i}`,
       },
     });
     await prisma.restaurant.upsert({
       where: { id: i },
       update: {},
       create: {
-        name: `Restaurant {i}`,
+        name: `Restaurant ${i}`,
       },
     });
     await prisma.reservations.upsert({

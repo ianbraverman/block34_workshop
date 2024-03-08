@@ -11,9 +11,9 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use("/api/customers", require("./api/customers.js"));
-app.use("/api/reservations", require("./api/reservations.js"));
-app.use("/api/restaurants", require("./api/restaurants.js"));
+app.use("/api", require("./api/customers.js"));
+app.use("/api", require("./api/reservations.js"));
+app.use("/api", require("./api/restaurants.js"));
 
 app.use((err, req, res, next) => {
   const status = err?.status ?? 500;
